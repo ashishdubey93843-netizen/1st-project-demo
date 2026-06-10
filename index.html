@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="C:\Users\Ashish Dubey\Downloads\amazon_logo.png" alt="Amazon Logo">
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search Amazon">
+            <button>Search</button>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Account</a>
+            <a href="#">Orders</a>
+            <a href="#">Cart</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Amazon Clone</h1>
+        <p>Shop Electronics, Fashion, Books and More</p>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+
+        <div class="card">
+            <img src="C:\Users\Ashish Dubey\Downloads\box4_image.jpg" alt="box4">
+            <h3>Electronics</h3>
+            <p>Best electronic gadgets.</p>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\Ashish Dubey\Downloads\box5_image.jpg" alt="box5">
+            <h3>Fashion</h3>
+            <p>Latest fashion trends.</p>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\Ashish Dubey\OneDrive\Documents\box10.jpg" alt="box10">
+            <h3>Books</h3>
+            <p>Explore your favorite books.</p>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\Ashish Dubey\Downloads\box7_image.jpg" alt="box7">
+            <h3>Home Decor</h3>
+            <p>Decorate your home beautifully.</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Amazon Clone. All Rights Reserved.</p>
+    </footer>
+<script>
+function searchProducts() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let title = card.querySelector("h3").innerText.toLowerCase();
+
+        if(title.includes(input)){
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+</body>
+</html>
